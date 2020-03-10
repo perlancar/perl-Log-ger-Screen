@@ -1,6 +1,8 @@
 package Log::ger::Screen;
 
+# AUTHORITY
 # DATE
+# DIST
 # VERSION
 
 # IFUNBUILT
@@ -20,12 +22,18 @@ sub import {
 }
 
 1;
+# ABSTRACT: Convenient packaging of Log::ger + Log::ger::Output::Screen + Log::ger::Level::FromEnv for one-liner
 
 =head1 SYNOPSIS
 
 Mostly in one-liners:
 
  % perl -MLog::ger::Screen -E'log_warn "blah..."; ...'
+
+Set level from environment variable (see L<Log::ger::Level::FromEnv> for more
+details:
+
+ % TRACE=1 perl ...
 
 
 =head1 DESCRIPTION
@@ -34,7 +42,7 @@ This is just a convenient packaging of:
 
  use Log::ger::Level::FromEnv;
  use Log::ger::Output 'Screen';
- use Log::ger;
+ use Log::ger; # in the caller's package
 
 mostly for one-liner usage.
 
