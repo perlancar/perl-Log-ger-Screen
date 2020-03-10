@@ -1,0 +1,86 @@
+0.013   2019-10-06  Released-By: PERLANCAR; Urgency: low
+
+	- No functional changes.
+
+	- [doc] Add FAQ items: how to turn file/screen/syslog logging off.
+
+
+0.012   2019-10-06  Released-By: PERLANCAR; Urgency: medium
+
+	- Add arguments: file_name, file_dir to allow customizing log
+	  file's location.
+
+	- Check for known arguments.
+
+
+0.011   2019-09-18  Released-By: PERLANCAR; Urgency: low
+
+	- No functional changes.
+
+	- [doc] Fix grammar and add example to FAQ item.
+
+
+0.010   2019-09-17  Released-By: PERLANCAR; Urgency: low
+
+	- No functional changes.
+
+	- [doc] Add FAQ item on how to re-set log level.
+
+
+0.009   2018-12-17  Released-By: PERLANCAR
+
+        - Introduce import argument 'default_level' to set default log level.
+
+	- Observe LOG_GER_APP_DEBUG to show details on how level etc are
+	  set.
+
+
+0.008   2018-08-30  Released-By: PERLANCAR
+
+	- No functional changes.
+
+	- [doc] More tweaks/formatting of documentation.
+
+
+0.007   2018-08-30  Released-By: PERLANCAR
+
+	- No functional changes.
+
+	- [doc] Add more documentation.
+
+
+0.006   2018-08-07  Released-By: PERLANCAR
+
+	- Observe LOG_ADD_TIMESTAMP.
+
+
+0.005   2018-01-17  Released-By: PERLANCAR
+
+	- [Bugfix] Don't even initialize output when level is off (e.g.
+	  don't attempt to open file if FILE_LOG_LEVEL is set to off).
+
+
+0.004   2017-09-07  Released-By: PERLANCAR
+
+	- [doc] Add more examples in Synopsis, tweak description.
+
+	- [Experimental] Accept 'outputs' for specifying extra outputs.
+
+
+0.003   2017-07-14  Released-By: PERLANCAR
+
+	- [dist] Specify dependency to Log::ger::Layout::Pattern.
+
+
+0.002   2017-07-12  Released-By: PERLANCAR
+
+	- Add argument: level.
+
+        - Simpler layout for Screen: 'PROGNAME: MESSAGE'.
+
+
+0.001    2017-07-12  Released-By: PERLANCAR
+
+         - First release. Log::ger::App is a spiritual successor to
+           Log::Any::App. Log::ger::App tries to do less and, thanks to
+           Log::ger::Output::Composite, will be much simpler.
