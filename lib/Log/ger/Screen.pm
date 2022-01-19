@@ -1,17 +1,15 @@
 package Log::ger::Screen;
 
+use strict;
+use warnings;
+
+use Log::ger::Level::FromEnv;
+use Log::ger::Output 'Screen' => (colorize_tags=>1);
+
 # AUTHORITY
 # DATE
 # DIST
 # VERSION
-
-# IFUNBUILT
-use strict;
-use warnings;
-# END IFUNBUILT
-
-use Log::ger::Level::FromEnv;
-use Log::ger::Output 'Screen';
 
 sub import {
     my ($package, %per_target_conf) = @_;
