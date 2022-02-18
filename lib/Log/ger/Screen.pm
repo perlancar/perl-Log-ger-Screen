@@ -3,6 +3,7 @@ package Log::ger::Screen;
 use strict;
 use warnings;
 
+use Log::ger::Level::FromVar;
 use Log::ger::Level::FromEnv;
 use Log::ger::Output 'Screen' => (colorize_tags=>1);
 
@@ -20,7 +21,7 @@ sub import {
 }
 
 1;
-# ABSTRACT: Convenient packaging of Log::ger + Log::ger::Output::Screen + Log::ger::Level::FromEnv for one-liner
+# ABSTRACT: Convenient packaging of Log::ger + Lg:Output::Screen + Lg:Level::FromVar + Lg:Level::FromEnv for one-liner
 
 =head1 SYNOPSIS
 
@@ -28,8 +29,13 @@ Mostly in one-liners:
 
  % perl -MLog::ger::Screen -E'log_warn "blah..."; ...'
 
+Set level from package variable (see L<Log::ger::Level::FromVar> for more
+details):
+
+ % perl -E'BEGIN { $Default_Log_Level = 'info' } use Log::ger::Screen; ...'
+
 Set level from environment variable (see L<Log::ger::Level::FromEnv> for more
-details:
+details):
 
  % TRACE=1 perl ...
 
@@ -38,6 +44,7 @@ details:
 
 This is just a convenient packaging of:
 
+ use Log::ger::Level::FromVar;
  use Log::ger::Level::FromEnv;
  use Log::ger::Output 'Screen';
  use Log::ger; # in the caller's package
@@ -50,6 +57,8 @@ mostly for one-liner usage.
 L<Log::ger::App>
 
 L<Log::ger>
+
+L<Log::ger::Level::FromVar>
 
 L<Log::ger::Level::FromEnv>
 
